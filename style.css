@@ -1,0 +1,462 @@
+body {
+  margin: 0;
+  font-family: 'Andika';
+}
+.header {
+  position: fixed;
+  padding: 1.3rem;
+  width: 100%;
+  height: 2rem;
+  z-index: 500;
+  -webkit-animation-name: topDown;
+  animation-name: topDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+.header_1 {
+  background: rgba(0,0,0,0.8);
+  border-bottom: 2px solid green;
+  transition: 160ms;
+}
+.header a:first-child {
+  text-decoration: none;
+  color: green;
+  font-family: 'Aclonica';
+  font-size: 1.5rem;
+  position: relative;
+  top: 4px;
+}
+.header a:first-child:hover {
+  color: azure;
+}
+.header a:not(:first-child) {
+  text-decoration: none;
+  color: azure;
+  font-size: 1.1rem;
+  float: right;
+  padding-bottom: .5rem;
+  margin-right: 3rem;
+  transition: 160ms;
+}
+.header a:not(:first-child):hover {
+  color: green;
+  border-bottom: 2px solid green;
+  padding-bottom: .2rem;
+  transition: 160ms;
+}
+.back1 {
+  position: relative;
+  background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.4), rgba(0,0,0,0.9)), url('images/back1.jpg');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  height: 40rem;
+}
+.back1 .content1 {
+  position: relative;
+  top: 13rem;
+  padding: 1.2rem;
+  color: azure;
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+.back1 .content1 .join_now {
+  position: relative;
+  top: 1.6rem;
+  border: 5px solid green;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: green;
+  border-radius: 5px;
+  background: linear-gradient(to right, green 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  transition: 160ms;
+}
+.back1 .content1 .join_now:hover {
+  background-position: left bottom;
+  color: azure;
+  box-shadow: 0 6px 12px 0 rgba(0,0,0,0.8), 0 10px 22px 0 rgba(0,0,0,0.3);
+  transition: 160ms;
+}
+.back2 {
+  position: relative;
+  margin: 0;
+  height: 55rem;
+  background: azure;
+  text-align: center;
+}
+.back2 .card_1 {
+  position: relative;
+  top: 2rem;
+  width: 15rem;
+  height: 20rem;
+  border-radius: 4px;
+  border: 4px solid green;
+  background: linear-gradient(to right, green 50%, transparent 50%);
+  background-size: 200% 100%;
+  background-position: right bottom;
+  -webkit-animation-name: zoom;
+  animation-name: zoom;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  transition: 160ms;
+}
+.back2 .card_1:hover {
+  box-shadow: 0 .9rem 1.5rem 0 rgba(0,0,0,0.8), 0 .5rem 1rem 0 rgba(0,0,0,0.3);
+  background-position: left bottom;
+  -webkit-transform: translateY(-5px);
+  transform: translateY(-5px);
+  color: azure;
+  transition: 160ms;
+}
+.card_down {
+  position: relative;
+  top: 15rem;
+}
+/*.back2 .card_1 .card_img {
+  width: 15rem;
+  height: 20rem;
+  background: url("images/gym.jpg");
+  background-position: left bottom;
+  background-size: cover;
+  filter: blur(1px);
+  transition: 160ms;
+  z-index: 20;
+}
+.back2 .card_1 .card_img:hover {
+  background-position: right bottom;
+  transition: 160ms;
+}
+.back2 .card_1 h2 {
+  position: absolute;
+  left: 50%;
+  top: 10rem;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  font-size: 1.5rem;
+  color: black;
+  z-index: 50;
+  transition: 160ms;
+}
+.back2 .card_1:hover h2 {
+  visibility: hidden;
+  transition: 160ms;
+}
+.back2 .card_1 h3 {
+  position: absolute;
+  z-index: 60;
+  top: -1rem;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  font-size: 3rem;
+  visibility: hidden;
+  transition: 160ms;
+}
+.back2 .card_1:hover h3 {
+  visibility: visible;
+  transition: 160ms;
+}
+*/
+.back3 {
+  position: relative;
+  margin: 0;
+  padding: 1.1rem;
+  color: white;
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.98), rgba(0,0,0,0.4), rgba(0, 0, 0, 0.98)), url("images/back3.jpg");
+  background-size: cover;
+  background-position: center center;
+  height: 38rem;
+}
+.back3 .alert {
+  position: fixed;
+  top: 8rem;
+  margin: 0 20% 0 20%;
+  width: 60%;
+  height: 60%;
+  border: 5px solid green;
+  border-radius: 5px;
+  padding: 1.2rem;
+  color: green;
+  background: rgba(0,0,0,0.9);
+  z-index: 500;
+  display: none;
+  -webkit-animation-name: animatescale;
+  animation-name: animatescale;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  transition: 200ms;
+}
+.back3 .alert .close {
+  position: relative;
+  top: -1.4rem;
+  float: right;
+  font-size: 3rem;
+  color: green;
+  text-decoration: none;
+  cursor: pointer;
+  transition: 160ms;
+}
+.back3 .alert .close:hover {
+  color: azure;
+  transition: 160ms;
+}
+@-webkit-keyframes animatescale {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1.5);
+  }
+  60% {
+    transform: scale(0.8);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes animatescale {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1.5);
+  }
+  60% {
+    transform: scale(0.8);
+  }
+  80% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.back3 .input_1 {
+  padding: 1.1rem;
+  border-radius: 4px;
+  color: white;
+  border: 3px solid green;
+  background: rgba(0,0,0,0.8);
+}
+.back3 .calc {
+  padding: 1.3rem;
+  font-size: 1rem;
+  color: green;
+  border-radius: 4px;
+  border: 4px solid green;
+  background: rgba(0,0,0,0.9);
+  cursor: pointer;
+  transition: 160ms;
+}
+.back3 .calc:hover {
+  background: rgba(0,0,0,0.6);
+  transition: 160ms;
+}
+.back4 {
+  position: relative;
+  background: azure;
+  height: 35rem;
+  padding: 1rem;
+}
+.back4 .card_trainer {
+  position: relative;
+  width: 20rem;
+  height: 27rem;
+  text-align: center;
+  box-shadow: 0 6px 15px 0 rgba(0,0,0,0.8), 0 8px 12px 0 rgba(0,0,0,0.4);
+}
+.back4 .card_trainer:hover {
+  box-shadow: 0 6px 15px 0 rgba(41, 128, 4, 0.8), 0 8px 12px 0 rgba(0, 128, 7, 0.4);
+}
+.back4 .card_trainer .card_trainer1 {
+  width: 20rem;
+  height: 12rem;
+  background-size: cover;
+}
+.back4 .card_trainer .card_bottom {
+  position: relative;
+  bottom: -2px;
+  width: 20rem;
+  background: green;
+  color: azure;
+  cursor: pointer;
+  padding: 1rem 0 1rem 0;
+}
+.back4 .card_trainer .card_bottom:hover {
+  opacity: 0.7;
+}
+.back5 {
+  position: relative;
+  height: 47rem;
+  background: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.4), rgba(0,0,0,0.8)), url("images/back5.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: azure;
+  text-align: center;
+  padding: 1rem;
+}
+/*.back5 .img_gallery {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+}*/
+.back5 .gallery_1 {
+  position: relative;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  transform: translate(-50%);
+  width: 18rem;
+  height: 18rem;
+  border-radius: 50%;
+  border: 8px solid white;
+  transition: 160ms;
+}
+.back5 .img_2 {
+  position: relative;
+  left: 8rem;
+  top: -3rem;
+  z-index: 1;
+}
+.back5 .img_3 {
+  position: relative;
+  left: 11rem;
+  z-index: 2;
+}
+.back5 .img_4 {
+  position: relative;
+  left: 8rem;
+  z-index: 2;
+}
+.back5 .img_6 {
+  position: relative;
+  left: 11rem;
+  top: -3rem;
+  z-index: 2;
+}
+.back5 .img_5 {
+  position: relative;
+  left: 0;
+  top: -1rem;
+  z-index: 1;
+}
+.back5 .img_1 {
+  position: relative;
+  left: 19rem;
+  top: -1rem;
+}
+.back5 .img_7 {
+  position: absolute;
+  z-index: 20;
+  top: 16rem;
+  width: 20rem;
+  height: 20rem;
+}
+.back5 .gallery_1:hover {
+  border: 8px solid green;
+  z-index: 100;
+  box-shadow: 0 0 1.2rem 1.5rem rgba(0,0,0,0.8), 0 0 1rem 1.2rem rgba(0,0,0,0.3);
+  transition: 160ms;
+}
+.footer {
+  position: relative;
+  margin: 0;
+  height: 10rem;
+  padding: .5rem;
+  text-align: center;
+  background: darkgreen;
+  color: azure;
+}
+.footer a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.1rem;
+}
+.footer a:hover {
+  opacity: 0.7;
+}
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes zoom {
+  0% {
+    transform: scale(0);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  70% {
+    transform: scale(.7);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes topDown {
+  from {
+    top: -10rem;
+  }
+  to {
+    top: 0;
+  }
+}
+@keyframes topDown {
+  from {
+    top: -10rem;
+  }
+  to {
+    top: 0;
+  }
+}

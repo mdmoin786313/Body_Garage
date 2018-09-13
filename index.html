@@ -1,0 +1,300 @@
+<!doctype html>
+<html>
+<head>
+  <title>Home</title>
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Aclonica' rel='stylesheet'>
+  <link href='https://fonts.googleapis.com/css?family=Andika' rel='stylesheet'>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+    window.onscroll = function () {
+      var nav = document.getElementById("navbar");
+      if(window.pageYOffset <= 140) {
+        nav.classList.remove("header_1");
+      } else {
+        nav.classList.add("header_1");
+      }
+    }
+  </script>
+  <script>
+    $(document).ready(function(){
+      $("a").on('click', function(event) {
+       if(this.hash !== "") {
+
+         event.preventDefault();
+
+         var hash = this.hash;
+
+         $('html,body').animate({
+           scrollTop: $(hash).offset().top
+         }, 800, function () {
+           window.location.hash = hash;
+         });
+
+       }
+    });
+
+    });
+  </script>
+  <script>
+    var $window = $(window);
+    var $elem = $(".back2");
+
+    function isScrolledIntoView($elem, $window) {
+      var docViewTop = $window.scrollTop();
+      var docViewBottom = docViewTop + $window.height();
+
+      var elemTop = $elem.offset().top;
+      var elemBottom = elemTop + $elem.height();
+
+      return ((elemBottom <= docViewBottom) && (elemTop >= docViewTop));
+    }
+    $(document).on("scroll", function () {
+      if(isScrolledIntoView($elem, $window)) {
+        $elem.addClass("slideIn");
+      }
+    })
+  </script>
+</head>
+<body>
+<div class="back1" id="home">
+  <div class="header" id="navbar">
+    <a href="index.html">Body Garage</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#trainers">Trainers</a>
+    <a href="#bmibmr">BMI/BMR</a>
+    <a href="#services">Services</a>
+    <a href="#home">Home</a>
+  </div>
+  <div class="content1">
+    <h1>Blood, Sweat And Respect.<br>The First Two You Give. The last One You Earn.</h1>
+    <a href="" class="join_now">Join Now!</a>
+  </div>
+</div>
+<div class="back2" id="services">
+  <h2 style="color:green">Services</h2>
+  <table align="center" cellpadding="15">
+    <tr>
+      <td rowspan="2">
+        <div class="card_1">
+          <img src="images\dumbell.png" height="100" width="100" style="position:relative;top:1.2rem;">
+          <h2>Gym</h2>
+          <h3>&#8377;800<br>Per Month</h3>
+        </div>
+      </td>
+      <td>
+        <div class="card_1">
+          <img src="images\treadmill.png" height="100" width="100" style="position:relative;top:1.2rem;">
+          <h2>Cardio</h2>
+          <h3>&#8377;900<br>Per Month</h3>
+        </div>
+      </td>
+      <td>
+        <div class="card_1">
+          <img src="images\gymcar.png" height="100" width="100" style="position:relative;top:1.2rem;">
+          <h2>Gym/Cardio</h2>
+          <h3>&#8377;1400<br>Per Month</h3>
+        </div>
+      </td>
+      <td rowspan="2">
+        <div class="card_1">
+          <img src="images\body.png" height="100" width="100" style="position:relative;top:1.2rem;">
+          <h2>Bodybuilding</h2>
+          <h3>&#8377;15000<br>Per Year</h3>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <div class="card_1">
+          <img src="images\steam.png" height="100" width="100" style="position:relative;top:1.2rem;">
+          <h2>Steam</h2>
+          <h3>&#8377;500<br>Per Month</h3>
+        </div>
+      </td>
+      <td>
+        <div class="card_1">
+          <img src="images\sauna.png" height="100" width="100" style="position:relative;top:1.2rem;">
+          <h2>Sauna Bath</h2>
+          <h3>&#8377;700<br>Per Month</h3>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="back3" align="center" id="bmibmr">
+  <h2>See How Much You Need Workout!</h2>
+  <table cellpadding="15">
+    <tr align="center">
+      <td colspan="4">
+        <h2>BMI/BMR Calculator</h2>
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3>Weight (In Kilograms)</h3>
+      </td>
+      <td>
+        <input type="number" name="weight" id="weight" class="input_1">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3>Height (In Metres)</h3>
+      </td>
+      <td>
+        <input type="number" name="height" id="height" class="input_1">
+      </td>
+    </tr>
+    <tr>
+      <td>
+        <h3>Age (In Years)</h3>
+      </td>
+      <td>
+        <input type="number" name="age" id="age" class="input_1">
+      </td>
+    </tr>
+    <tr align="center">
+      <td colspan="2">
+        <input type="button" value="Calculate BMI/BMR" id="calc_bmi" class="calc">
+      </td>
+    </tr>
+  </table>
+  <div class="alert" id="alert" align="center">
+    <a class="close">&times;</a>
+    <h2>See Your Results!</h2>
+    <table cellpadding="15">
+      <tr>
+        <td>
+          <h1>BMI:</h1>
+        </td>
+        <td>
+          <h2 id="bmi_result"></h2>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <h1>BMR:</h1>
+        </td>
+        <td>
+          <h2 id="bmr_result1"></h2>
+          <h2 id="bmr_result2"></h2>
+        </td>
+      </tr>
+    </table>
+  </div>
+  <script>
+    var button = document.getElementById("calc_bmi");
+
+    var alert = document.getElementById("alert");
+
+    var close = document.getElementsByClassName("close")[0];
+
+    button.onclick = function() {
+      alert.style.display = "block";
+      var weight = document.getElementById("weight").value;
+      var height = document.getElementById("height").value;
+      var age = document.getElementById("age").value;
+      var cal_bmi;
+      var cal_bmr_women;
+      var cal_bmr_men;
+
+      cal_bmi = weight / (height * height);
+      cal_bmr_men = 88.362 + (13.397 * weight) + (4.799 * 100 * height) - (5.677 * age);
+      cal_bmr_women = 447.593 + (9.247 * weight) + (3.098 * 100 * height) - (4.330 * age);
+
+      var bmi_val = cal_bmi.toPrecision(4);
+      var bmr_val_men = cal_bmr_men.toPrecision(4);
+      var bmr_val_women = cal_bmr_women.toPrecision(4);
+
+      var bmi_result = document.getElementById("bmi_result");
+      var textNode = document.createTextNode(bmi_val);
+      bmi_result.appendChild(textNode);
+
+      var bmr_result1 = document.getElementById("bmr_result1");
+      var textNode_1 = document.createTextNode(bmr_val_men + " (For Men)");
+      bmr_result1.appendChild(textNode_1);
+
+      var bmr_result2 = document.getElementById("bmr_result2");
+      var textNode_2 = document.createTextNode(bmr_val_women + " (For Women)");
+      bmr_result2.appendChild(textNode_2);
+    };
+
+    close.onclick = function() {
+      alert.style.display = "none";
+      location.reload();
+    };
+
+  </script>
+</div>
+<div class="back4" align="center" id="trainers">
+  <h2 style="color:green">Our Expert Trainers</h2>
+  <table cellpadding="15">
+    <tr>
+      <td>
+        <div class="card_trainer">
+          <img src="images\trainer1.jpg" class="card_trainer1">
+          <h2 style="color:green">Andrew Mcchogney</h2>
+          <h5 style="color:gray">ASE, ASCM & ISSA Certified</h5>
+          <h4>Body Garage Gym Trainer</h4>
+          <h3 class="card_bottom">Contact</h3>
+        </div>
+      </td>
+      <td>
+        <div class="card_trainer">
+          <img src="images\trainer3.jpg" class="card_trainer1">
+          <h2 style="color:green">Sarah Williams</h2>
+          <h5 style="color:gray">NASM, ASCM & NSCA Certified</h5>
+          <h4>Former Intensity Gym Trainer</h4>
+          <h3 class="card_bottom">Contact</h3>
+        </div>
+      </td>
+      <td>
+        <div class="card_trainer">
+          <img src="images\trainer2.jpg" class="card_trainer1">
+          <h2 style="color:green">Tom Black</h2>
+          <h5 style="color:gray">ISSA, ASCM & ASE Certified</h5>
+          <h4>Former Flex Gym Trainer</h4>
+          <h3 class="card_bottom">Contact</h3>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div>
+<div class="back5" id="gallery">
+  <h2 style="padding:1.2rem;margin-bottom: 1.6rem;">Gallery</h2>
+  <div class="img_gal">
+    <img src="images\gym5.jpg" class="gallery_1 img_7">
+    <table align="center">
+    <tr>
+      <td rowspan="2">
+        <img src="images\gym1.jpg" class="gallery_1 img_1">
+      </td>
+        <td>
+        <img src="images\gym3.jpg" class="gallery_1 img_3">
+          </td>
+        <td>
+        <img src="images\gym4.jpg" class="gallery_1 img_4">
+        </td>
+        <td rowspan="2">
+        <img src="images\gym7.jpg" class="gallery_1 img_5">
+        </td>
+    </tr>
+      <tr>
+        <td>
+        <img src="images\gym6.jpg" class="gallery_1 img_6">
+        </td>
+        <td>
+        <img src="images\gym2.jpg" class="gallery_1 img_2">
+      </td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="footer">
+  <h3 style="color:#000000;">Copyright &copy; 2018 Govt. Of India</h3>
+  <a href="">BodyGarage.com</a>
+  <h4 style="color:#181818">The Website Is Best Viewed At Screen Resolution of 1366 * 786 Pixels Or Higher In Google Chrome, Internet Explorer & Mozilla Firefox.</h4>
+</div>
+</body>
+</html>
